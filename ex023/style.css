@@ -1,0 +1,54 @@
+@charset "UTF-8"; /*Regra de acentuação*/
+
+@font-face { /*Fontes baixadas*/
+    font-family: titulo;
+    src: url(fontes/Lemon-Regular.ttf) format(truetype); /*Caminho/Formato*/
+}
+:root {
+    --fonte1: Arial, Helvetica, sans-serif;
+    --fonte2: titulo;
+    --cor1: black;
+    --cor2: lightgray;
+    --cor3: #383838;
+}
+
+h1 {
+    font-family: var(--fonte2);
+}
+
+body {
+    font-family: var(--fonte1);
+}
+
+table {
+    width: 500px;
+    border-collapse: collapse;
+    position: relative;
+}
+
+td, th {
+    border: 1px solid var(--cor1);
+    padding: 10px;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    background-color: var(--cor2);
+}
+
+thead, tfoot {
+    background-color: var(--cor3);
+    color: white;
+    position: sticky;
+    top: -1px;
+}
+
+tbody > tr:nth-child(2n) {
+    background-color: var(--cor2);
+}
+
+td.num {
+    text-align: right;
+}
